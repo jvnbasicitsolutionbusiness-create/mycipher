@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="description"
+        content="OLASO' Caesar Cipher Message Board - Secure communication using classical encryption."
+    >
+
+    <title>OLASO' | Caesar Cipher</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="app-container">
+
+        <!-- ================= HEADER ================= -->
+        <header class="site-header">
+
+            <div class="brand">
+
+                <div class="brand-icon">
+                    C
+                </div>
+
+                <div class="brand-text">
+                    <h1>OLASO'</h1>
+                    <span>CAESAR CIPHER SYSTEM</span>
+                </div>
+
+            </div>
+
+
+            <div class="system-status">
+
+                <span class="status-indicator"></span>
+
+                <div>
+                    <small>SYSTEM STATUS</small>
+                    <strong>SECURE</strong>
+                </div>
+
+            </div>
+
+        </header>
+
+
+        <!-- ================= NAVIGATION ================= -->
+        <nav class="navigation">
+
+            <a href="#encrypt-section" class="nav-item active">
+                <span>01</span>
+                Encrypt
+            </a>
+
+            <a href="#feed-section" class="nav-item">
+                <span>02</span>
+                Message Feed
+            </a>
+
+            <div class="cipher-info">
+                <span>ALGORITHM</span>
+                <strong>CAESAR / ROT</strong>
+            </div>
+
+        </nav>
+
+
+        <!-- ================= MAIN ================= -->
+        <main class="dashboard">
+
+
+            <!-- ================= HERO ================= -->
+            <section class="hero-section">
+
+                <div class="hero-content">
+
+                    <span class="hero-label">
+                        CLASSICAL ENCRYPTION PROTOCOL
+                    </span>
+
+                    <h2>
+                        Send Messages.<br>
+                        <span>Keep Them Secret.</span>
+                    </h2>
+
+                    <p>
+                        Encrypt your message using the Caesar Cipher
+                        and a custom shift value before sharing it
+                        with the community.
+                    </p>
+
+                </div>
+
+
+                <div class="cipher-wheel">
+
+                    <div class="wheel-center">
+                        <span>ROT</span>
+                        <strong>03</strong>
+                    </div>
+
+                    <div class="wheel-letter letter-a">A</div>
+                    <div class="wheel-letter letter-b">B</div>
+                    <div class="wheel-letter letter-c">C</div>
+                    <div class="wheel-letter letter-d">D</div>
+                    <div class="wheel-letter letter-e">E</div>
+                    <div class="wheel-letter letter-f">F</div>
+
+                </div>
+
+            </section>
+
+
+            <!-- ================= ENCRYPT CARD ================= -->
+            <section
+                id="encrypt-section"
+                class="card encryption-card"
+            >
+
+                <div class="card-top">
+
+                    <div>
+
+                        <span class="eyebrow">
+                            ENCRYPTION TERMINAL
+                        </span>
+
+                        <h2>
+                            Create a Secret Message
+                        </h2>
+
+                        <p>
+                            Enter your message and choose a shift
+                            value to encrypt your text.
+                        </p>
+
+                    </div>
+
+                    <div class="terminal-icon">
+                        &gt;_
+                    </div>
+
+                </div>
+
+
+                <!-- MESSAGE -->
+                <div class="form-group">
+
+                    <div class="label-row">
+
+                        <label for="message">
+                            MESSAGE
+                        </label>
+
+                        <span class="character-count">
+                            PLAINTEXT
+                        </span>
+
+                    </div>
+
+                    <textarea
+                        id="message"
+                        rows="7"
+                        placeholder="Enter your secret message..."
+                        autocomplete="off"
+                    ></textarea>
+
+                    <div class="input-footer">
+
+                        <span>
+                            Your message will be encrypted before posting.
+                        </span>
+
+                        <span>
+                            AES-CIPHER TERMINAL
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <!-- SHIFT VALUE -->
+                <div class="form-group">
+
+                    <div class="label-row">
+
+                        <label for="key">
+                            SHIFT VALUE
+                        </label>
+
+                        <span class="character-count">
+                            ROTATION
+                        </span>
+
+                    </div>
+
+
+                    <div class="shift-control">
+
+                        <div class="shift-prefix">
+                            ROT
+                        </div>
+
+                        <input
+                            type="number"
+                            id="key"
+                            min="1"
+                            max="25"
+                            value="3"
+                            placeholder="3"
+                            autocomplete="off"
+                        >
+
+                        <div class="shift-description">
+                            <span>Caesar Shift</span>
+                            <small>1 – 25</small>
+                        </div>
+
+                    </div>
+
+                    <span class="input-hint">
+                        Choose how many positions each letter will move.
+                    </span>
+
+                </div>
+
+
+                <!-- ENCRYPT BUTTON -->
+                <button
+                    id="encryptButton"
+                    class="primary-button"
+                    type="button"
+                >
+
+                    <span class="button-icon">
+                        🔐
+                    </span>
+
+                    <span>
+                        ENCRYPT &amp; POST
+                    </span>
+
+                    <span class="button-arrow">
+                        →
+                    </span>
+
+                </button>
+
+
+                <!-- ENCRYPTION INFO -->
+                <div class="encryption-info">
+
+                    <div class="info-item">
+
+                        <span class="info-number">
+                            01
+                        </span>
+
+                        <div>
+                            <strong>ENTER MESSAGE</strong>
+                            <small>Write your plaintext</small>
+                        </div>
+
+                    </div>
+
+
+                    <div class="info-line"></div>
+
+
+                    <div class="info-item">
+
+                        <span class="info-number">
+                            02
+                        </span>
+
+                        <div>
+                            <strong>SELECT SHIFT</strong>
+                            <small>Choose ROT value</small>
+                        </div>
+
+                    </div>
+
+
+                    <div class="info-line"></div>
+
+
+                    <div class="info-item">
+
+                        <span class="info-number">
+                            03
+                        </span>
+
+                        <div>
+                            <strong>ENCRYPT</strong>
+                            <small>Post securely</small>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- ================= MESSAGE FEED ================= -->
+            <section
+                id="feed-section"
+                class="card feed-card"
+            >
+
+                <div class="card-top feed-header">
+
+                    <div>
+
+                        <span class="eyebrow">
+                            TRANSMISSION LOG
+                        </span>
+
+                        <h2>
+                            Public Message Feed
+                        </h2>
+
+                        <p>
+                            Encrypted messages transmitted by the community.
+                        </p>
+
+                    </div>
+
+
+                    <div class="live-status">
+
+                        <span class="status-indicator"></span>
+
+                        <span>
+                            LIVE
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <!-- MESSAGE FEED -->
+                <div
+                    id="messageFeed"
+                    class="message-feed"
+                >
+
+                    <div class="loading-state">
+
+                        <div class="loading-spinner"></div>
+
+                        <p>
+                            Establishing secure connection...
+                        </p>
+
+                        <small>
+                            Loading encrypted transmissions
+                        </small>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+        </main>
+
+
+        <!-- ================= FOOTER ================= -->
+        <footer class="site-footer">
+
+            <div class="footer-brand">
+
+                <span class="footer-symbol">
+                    C
+                </span>
+
+                <div>
+
+                    <strong>
+                        OLASO' CIPHER
+                    </strong>
+
+                    <small>
+                        Classical Encryption System
+                    </small>
+
+                </div>
+
+            </div>
+
+
+            <div class="footer-center">
+
+                <span>
+                    CAESAR CIPHER
+                </span>
+
+                <span class="footer-divider">
+                    /
+                </span>
+
+                <span>
+                    ROTATION ENCRYPTION
+                </span>
+
+            </div>
+
+
+            <div class="footer-security">
+
+                <span class="status-indicator"></span>
+
+                <span>
+                    CONNECTION SECURE
+                </span>
+
+            </div>
+
+        </footer>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
